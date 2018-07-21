@@ -16,12 +16,11 @@ import lombok.Setter;
 @NoArgsConstructor
 
 @Entity
-@Table(name = "destination")
+@Table(name = "country")
 public class Country extends BaseEntity{
 
 	@Column(nullable = false , unique = true)
 	private String name;
 	
-	@OneToMany(mappedBy = "country")
-	private List<Destination> destinations;
+	
 }

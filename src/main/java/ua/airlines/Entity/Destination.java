@@ -1,9 +1,12 @@
 package ua.airlines.Entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -27,5 +30,8 @@ public class Destination extends BaseEntity{
 	@ManyToOne
 	@JoinColumn(name = "country_id" , nullable = false)
 	private Country country;
+	
+	@OneToMany(mappedBy = "country")
+	private List<Destination> destinations;
 
 }
