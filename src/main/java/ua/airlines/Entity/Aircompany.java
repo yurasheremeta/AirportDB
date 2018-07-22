@@ -2,6 +2,7 @@ package ua.airlines.Entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -21,4 +22,5 @@ public class Aircompany extends BaseEntity {
 		
 		@Column(name = "company_addres" , nullable = false)
 		private String companyAddres;
+
 }
